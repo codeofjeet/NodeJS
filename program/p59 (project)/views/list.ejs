@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <%- include('navbar') %>
+
+    <h1 style="text-align:center;">Task List</h1>
+
+    <!-- 🔍 Search Bar -->
+    <div class="container">
+        <form method="get" action="/" class="search-box">
+            <input type="text" name="search" placeholder="Search task..." />
+            <button class="btn">Search</button>
+        </form>
+    </div>
+
+    <!-- 📋 Task List -->
+    <div class="container">
+        <% if (tasks.length === 0) { %>
+            <p style="text-align:center;">No tasks found</p>
+        <% } %>
+
+        <% tasks.forEach(item => { %>
+            <div class="card <%= item.completed ? 'completed' : '' %>">
+                
+                <h3><%= item.title %></h3>
+                <p><%= item.desc %></p>
+
+                <div class="actions">
+
+                    <!-- ✏️ Edit -->
+                    <a href="/update/<%= item._id %>" class="btn edit">Edit</a>
+
+                    <!-- 🗑️ Delete -->
+                    <form action="/delete/<%= item._id %>" method="post" style="display:inline;">
+                        <button class="btn delete">Delete</button>
+                    </form>
+
+                    <!-- ✅ Complete -->
+                    <form action="/complete/<%= item._id %>" method="post" style="display:inline;">
+                        <button class="btn complete">
+                            <%= item.completed ? "Undo" : "Complete" %>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        <% }) %>
+    </div>
+
+    <!-- 🌙 Dark Mode Script -->
+    <script>
+        function toggleDark() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>

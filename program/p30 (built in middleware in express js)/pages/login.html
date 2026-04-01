@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/css/loginstyle.css">
+</head>
+<body>
+    <header>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple home page</p>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/service">Services</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/submit" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

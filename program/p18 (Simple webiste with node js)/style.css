@@ -1,0 +1,365 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+}
+
+.header{
+    width: 100%;
+    height: 700px;
+    background-image: url(image/person.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header .topbar{
+    /* position: absolute; */
+    width: 100%;
+    height: 60px;
+    background-color: beige;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.topbar .cname{
+    width: 20%;
+    height: 50px;
+    background-color: rgb(182, 182, 182);
+}
+
+.topbar .info{
+    width: 40%;
+    height: 50px;
+    background-color: rgb(182, 182, 182);
+}
+
+.header .menu{
+    /* position: relative; */
+    width: 75%;
+    height: 50px;
+    background-color:white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 35px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.mainmenu{
+    width: 100%;
+}
+
+.mainmenu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.mainmenu a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.mainmenu a:hover{
+    color: lightskyblue;
+}
+
+.card{
+    width: 70%;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.cardOne, .cardTwo, .cardThree{
+    width: 30%;
+    height: auto;
+    background-color: white;
+    margin: 20px 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.img{
+    width: 96%;
+    height: 150px;
+    border: 6px solid rgb(214, 212, 212);
+}
+
+.pera{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.mormal-text{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 15px;
+    color: gray;
+    padding: 0 10px;
+    
+
+}
+
+.btn{
+    display: block; 
+    margin: 20px auto;
+    padding: 7px;
+    border: 1px solid rgb(207, 198, 198);
+    border-radius: 4px;
+}
+
+.info-about{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(44, 43, 43);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left-info{
+    width: 28%;
+    height: 500px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-info .left-pic{
+    width: 100%;
+    height: 50%;
+    background-image: url(image/info-pic1.jpg);
+    border-radius: 2%;
+}
+
+.left-info .left-text{
+    width: 100%;
+    height: 32%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 130%;
+}
+
+.center-info{
+    width: 30%;
+    height: 550px;
+    background-image: url(image/info-pic3.jpg);
+    border-radius: 2%;
+}
+
+.right-info{
+    width: 28%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-info .right-pic{
+    width: 100%;
+    height: 50%;
+    background-image: url(image/info-pic2.jpg);
+    border-radius: 2%;
+}
+
+.right-info .right-text{
+    width: 100%;
+    height: 32%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 130%;
+}
+
+.main-one{
+    width: 98%;
+    height: 600px;
+    background-color:beige;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.main-one .left-one{
+    width: 50%;
+    height: 500px;
+    /* background-image: url(image/p1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    border-radius: 50% 0 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-one img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 0 0 0;
+    transform: scale(1.4);
+    opacity: 0;
+    animation: reveal 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reveal{
+    50%{
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    51%{
+        transform: scale(1.4);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.overlays{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay:nth-child(1){
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    animation: overlay-1 3s ease-in-out;
+}
+
+.overlay:nth-child(2){
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    animation: overlay-2 3s ease-in-out;
+}
+
+.overlay{
+    background: #fff;
+    flex: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overlay-1{
+    0%{
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+    }
+
+    50%{
+        transform: scaleX(1);
+        transform-origin: 100% 50%;
+    }
+    51%{
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+    }
+}
+
+@keyframes overlay-2{
+    0%{
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+    }
+
+    50%{
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
+    }
+    51%{
+        transform: scaleX(1);
+        transform-origin: 100% 50%;
+    }
+    100%{
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+    }
+}
+
+.main-one .right-one{
+    width: 50%;
+    height: 500px;
+    background-color:black ;
+    border-radius: 0 0 50% 0;
+}
+
+.right-one .text{
+    width: 90%;
+    height: auto;
+    margin: 40px;
+}
+
+.text #testimonial{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 18px;
+    color: rgb(228, 114, 114);
+    letter-spacing: 6px;
+}
+
+.text #client-say{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+}
+
+.text #pera{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 22px;
+    line-height: 160%;
+}
+
+#pera .double-quotes{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(228, 114, 114);
+}
+
+.text #client-name{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(228, 114, 114);
+}
+
+.text #profession{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 22;
+    font-weight: 500;
+}

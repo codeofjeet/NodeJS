@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Data</title>
+
+  <!-- Inner CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #9ccdff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #beff93;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #555;
+      margin: 10px 0;
+      font-weight: normal;
+    }
+
+    span {
+      font-weight: bold;
+      color: #222;
+    }
+
+    a{
+        color: red;
+        text-decoration: none;
+        margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>User Send Data</h1>
+    <h3>Name: <span><%= name %></span></h3>
+    <h3>Email: <span><%= email %></span></h3>
+    <h3>Message: <span><%= msg %></span></h3>
+    <br/><br/>
+     <a href="/">Go to Home</a>
+  </div>
+
+ 
+</body>
+</html>

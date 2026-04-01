@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Forms</h1>
+    <form action="#">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+
+    <hr />
+
+    <h2>Forms Element</h2>
+        <h3>1. The "input" Element</h3>
+            <p>* &lt;input type="text"&gt; :- is used to create a single-line text input field where users can enter textual data.</p>
+                <h4>Attributes</h4>
+                    <p>A. id :- The HTML id attribute is used to specify a unique id for an HTML element. You cannot have more than one element with the same id in an HTML document.</p>
+
+                        <form>
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name"><br>
+                        </form>
+                    <p>========================================================</p>
+                    
+                    <p>B. name :- name Attribute is used to specify a name for an &lt;input&gt; element. It is used to reference the form-data after submitting the form or to reference the element in a JavaScript. </p>
+
+                        <form action="#">
+                            <label for="fullname">First Name:</label><br>
+                            <input type="text" id="fullname" name="fname"><br>
+                            <label for="add">Address:</label><br>
+                            <input type="text" id="add" name="address"><br><br>
+                            <input type="submit" value="Submit">
+                        </form> 
+                    <p>========================================================</p>
+
+                    <p>C. value :-Specifies the default value of the input field. </p>
+
+                     <form action="#">
+                        <label for="nm">Name:</label><br>
+                        <input type="text" id="nm" value="Deepak" ><br><br>
+                        <input type="submit" value="Submit">
+                    </form> 
+                    <p>========================================================</p>
+
+                    <p>D. placeholder :- Provides a hint to the user of what can be entered in the input field.</p>
+
+                    <form action="#">
+                        <label>Name:</label><br>
+                        <input type="text" placeholder="Enter full name" ><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                     <p>========================================================</p>
+
+                    <p>E. maxlength :- Defines the maximum number of characters allowed in the input field. Textarea element. Its default value is 524288.</p>
+
+                    <form action="#">
+                        <label>Name:</label><br>
+                        <input type="text" placeholder="Enter full name" maxlength="5" ><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                     <p>========================================================</p>
+
+                     <p>F. required :- Indicates that the input field must be filled out before submitting the form.</p>
+
+                     <form action="#">
+                        <label>Username:</label><br>
+                        <input type="text" placeholder="Ener name" required><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <p>========================================================</p>
+
+                    <p>G. readonly :- Makes the input field read-only, preventing the user from modifying its value.</p>
+
+                    <form action="#">
+                        <label>Name:</label><br>
+                        <input type="text" placeholder="Ener name"><br><br>
+                        <label>City:</label><br>
+                        <input type="text" value="India" readonly><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <p>========================================================</p>
+
+                    <p>H. disabled :- Disables the input field, making it uneditable and excluding it from form submission.</p>
+
+                    <form action="#">
+                        <label>Name:</label><br>
+                        <input type="text" placeholder="Ener name"><br><br>
+                        <label>City:</label><br>
+                        <input type="text" value="India" disabled><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+</body>
+</html>

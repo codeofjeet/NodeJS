@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:lightslategray;
+            color: green;
+            font-weight: 600;
+        }
+
+        .course-box {
+            width: 450px;
+            margin: 200px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-box h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .course-detail {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: red;
+        }
+
+        a{
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="course-box">
+        <h2>Course Details using Template EJS</h2>
+        <div class="course-detail">
+            <span class="label">Course Name: </span><%= course %>
+        </div>
+        <div class="course-detail">
+            <span class="label">Duration: </span><%= duration %>
+        </div>
+        <div class="course-detail">
+            <span class="label">Fees: </span><%= fees %>
+        </div>
+    </div>
+        <a href="pages/home">Go to Home</a>
+</body>
+</html>
